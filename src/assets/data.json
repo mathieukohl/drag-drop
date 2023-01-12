@@ -1,7 +1,87 @@
 {
-    "list1": ["a", "i", "u", "e", "o"],
-    "list2": ["あ", "い", "う", "え", "お"],
-    "list3": ["ka", "ki", "ku", "ke", "ko"],
-    "list4": ["か", "き", "く", "け", "こ"]
+    "list1": [
+                {
+                "name":"a",
+                "fixed": false
+                },
+                {
+                "name":"i",
+                "fixed": false
+                },
+                {
+                "name":"u",
+                "fixed": false
+                },
+                {
+                "name":"e",
+                "fixed": false
+                },
+                {
+                "name":"o",
+                "fixed": false
+                },
+                {
+                "name":"ka",
+                "fixed": false
+                },
+                {
+                "name":"ki",
+                "fixed": false
+                },
+                {
+                "name":"ku",
+                "fixed": false
+                },
+                {
+                "name":"ke",
+                "fixed": false
+                },
+                {
+                "name":"ko",
+                "fixed": false
+                }
+            ],
+    "list2": [
+                {
+                "name":"あ",
+                "fixed": false
+                },
+                {
+                "name":"い",
+                "fixed": false
+                },
+                {
+                "name":"う",
+                "fixed": false
+                },
+                {
+                "name":"え",
+                "fixed": false
+                },
+                {
+                "name":"お",
+                "fixed": false
+                },
+                {
+                "name":"か",
+                "fixed": false
+                },
+                {
+                "name":"き",
+                "fixed": false
+                },
+                {
+                "name":"く",
+                "fixed": false
+                },
+                {
+                "name":"け",
+                "fixed": false
+                },
+                {
+                "name":"こ",
+                "fixed": false
+                }
+            ]
 }
   
