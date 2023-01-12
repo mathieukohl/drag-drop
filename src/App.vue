@@ -1,23 +1,41 @@
 <template>
   <div class="container">
-      <div class="list-container">
-        <h2>Syllable</h2>
-        <ul>
-          <draggable class="dragArea list-group w-full" :list="list1" @change="log">
-            <li v-for="(item, index) in list1" v-bind:key="index" @dragstart="dragStart($event, item)" draggable>{{ item }}</li>
-          </draggable>
-        </ul>
-      </div>
     <div class="list-container">
-      <h2>JP Characters</h2>
-      <ul @drop="drop" @dragover.prevent>
-        <draggable class="dragArea list-group w-full" :list="list2" @change="log">
-          <li v-for="(item, index) in list2" v-bind:key="index" @dragstart="dragStart($event, item)" draggable>{{ item }}</li>
+      <h2>Syllable</h2>
+      <ul>
+        <draggable class="dragArea list-group w-full" :list="list1" @change="log">
+          <li v-for="(item, index) in list1" v-bind:key="index">{{ item }}</li>
         </draggable>
       </ul>
     </div>
-    <button class="btn_random" @click="randomize">Randomize</button>
+    <div class="list-container">
+      <h2>JP Characters</h2>
+      <ul>
+        <draggable class="dragArea list-group w-full" :list="list2" @change="log">
+          <li v-for="(item, index) in list2" v-bind:key="index">{{ item }}</li>
+        </draggable>
+      </ul>
+    </div>
   </div>
+  <div class="container">
+    <div class="list-container">
+      <h2>Syllable</h2>
+      <ul>
+        <draggable class="dragArea list-group w-full" :list="list3" @change="log">
+          <li v-for="(item, index) in list3" v-bind:key="index">{{ item }}</li>
+        </draggable>
+      </ul>
+    </div>
+    <div class="list-container">
+      <h2>JP Characters</h2>
+      <ul @drop="drop" @dragover.prevent>
+        <draggable class="dragArea list-group w-full" :list="list4" @change="log">
+          <li v-for="(item, index) in list4" v-bind:key="index">{{ item }}</li>
+        </draggable>
+      </ul>
+    </div>
+  </div>
+  <button class="btn_random" @click="randomize">Randomize</button>
 </template>
 
 <script>
@@ -32,7 +50,9 @@ export default defineComponent({
   data() {
     return {
       list1: data.list1,
-      list2: data.list2
+      list2: data.list2,
+      list3: data.list3,
+      list4: data.list4,
     }
   },
   mounted() {
@@ -44,22 +64,11 @@ export default defineComponent({
       });
   },
   methods: {
-    dragStart(event, item) {
-      event.dataTransfer.setData("text/plain", item);
-    },
-    drop(event) {
-      const data = event.dataTransfer.getData("text/plain");
-      const from = event.dataTransfer.getData("from");
-      const to = event.currentTarget.parentElement.previousElementSibling.textContent;
-
-      if(from === to) return;
-
-      this[from] = this[from].filter(i => i !== data);
-      this[to].push(data);
-    },
     randomize() {
       this.list1.sort(() => Math.random() - 0.5);
       this.list2.sort(() => Math.random() - 0.5);
+      this.list3.sort(() => Math.random() - 0.5);
+      this.list4.sort(() => Math.random() - 0.5);
     }
   }
 })
