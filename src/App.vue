@@ -23,7 +23,7 @@
 <script>
 import { defineComponent } from 'vue';
 import { VueDraggableNext } from 'vue-draggable-next';
-import data from './data.json'
+import data from './assets/data.json'
 
 export default defineComponent({
   components: {
