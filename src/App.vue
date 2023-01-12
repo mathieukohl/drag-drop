@@ -3,7 +3,7 @@
     <div class="list-container">
       <h2>Syllable</h2>
       <ul>
-        <draggable class="dragArea list-group w-full" :list="list1" @change="log">
+        <draggable class="dragArea list-group w-full" :list="list1">
           <li v-for="(item, index) in list1" v-bind:key="index">{{ item }}</li>
         </draggable>
       </ul>
@@ -11,7 +11,7 @@
     <div class="list-container">
       <h2>JP Characters</h2>
       <ul>
-        <draggable class="dragArea list-group w-full" :list="list2" @change="log">
+        <draggable class="dragArea list-group w-full" :list="list2">
           <li v-for="(item, index) in list2" v-bind:key="index">{{ item }}</li>
         </draggable>
       </ul>
@@ -21,7 +21,7 @@
     <div class="list-container">
       <h2>Syllable</h2>
       <ul>
-        <draggable class="dragArea list-group w-full" :list="list3" @change="log">
+        <draggable class="dragArea list-group w-full" :list="list3">
           <li v-for="(item, index) in list3" v-bind:key="index">{{ item }}</li>
         </draggable>
       </ul>
@@ -29,7 +29,7 @@
     <div class="list-container">
       <h2>JP Characters</h2>
       <ul @drop="drop" @dragover.prevent>
-        <draggable class="dragArea list-group w-full" :list="list4" @change="log">
+        <draggable class="dragArea list-group w-full" :list="list4">
           <li v-for="(item, index) in list4" v-bind:key="index">{{ item }}</li>
         </draggable>
       </ul>
